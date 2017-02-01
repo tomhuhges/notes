@@ -8,12 +8,17 @@
 
 [link](https://munchies.vice.com/en_uk/recipes/lamb-souvlaki-wrap)
 
-`++ `[`linda mccartney red onion sausage`](http://www.lindamccartneyfoods.co.uk/our-food/frozen-range/vegetarian-red-onion-rosemary-sausages/)  
+`notes: ++ `[`linda mccartney red onion & rosemary sausage`](http://www.lindamccartneyfoods.co.uk/our-food/frozen-range/vegetarian-red-onion-rosemary-sausages/)  
 
 ----
 
-## [green mac + cheese](https://munchies.vice.com/en_uk/recipes/green-macaroni-and-cheese)  
-<img src="http://munchies-images.vice.com/wp_upload/pesto-mac-and-cheese-munchies.jpg?crop=1xw:0.4xh;*,*&resize=300:*" />
+<img src="http://munchies-images.vice.com/wp_upload/pesto-mac-and-cheese-munchies.jpg?crop=1xw:0.4xh;*,*&resize=300:*" align="right"/>
+
+## green mac + cheese
+
+[link](https://munchies.vice.com/en_uk/recipes/green-macaroni-and-cheese)  
+
+`notes: needs more flavour, try lots of basil / more interesting cheese`
 
 ----
 

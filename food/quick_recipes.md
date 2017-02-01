@@ -22,8 +22,13 @@
 
 ----
 
-## ['american chop suey'](http://www.seriouseats.com/recipes/2014/09/american-chop-suey-johnny-marzetti-beefaroni-hamburger-helper-goulash-italian-american-recipe.html)  
-`++ butter beans`
+<img src="http://www.seriouseats.com/recipes/assets_c/2014/09/20140923-American-chop-suey-01-thumb-1500xauto-411603.jpg" align="right" width="300"/>
+
+## 'american chop suey'
+
+[link](http://www.seriouseats.com/recipes/2014/09/american-chop-suey-johnny-marzetti-beefaroni-hamburger-helper-goulash-italian-american-recipe.html)  
+
+`notes: ++ butter beans`
 
 ----
 

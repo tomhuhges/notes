@@ -12,17 +12,13 @@ most of these notes were made while simultaneously referencing the 2 resources a
 - [getters and setters](#getters-and-setters)
 - [facade pattern](#facade-pattern)
 - [adapter pattern](#adapter-pattern)
-- [namespacing](#namespacing)
-- [amd/require.js](#amdrequirejs)
 - [pubsub pattern](#pubsub-pattern)
-- [prototypal inheritance](#prototypal-inheritance)
 - [mixins pattern](#mixins-pattern)
 - [mvc / mvp / mvvm](#mvc--mvp--mvvm)
 - [factory pattern](#factory-pattern)
 - [lazy initialisation](#lazy-initialisation)
 - [generator/iterator pattern](#generatoriterator-pattern)
 - [composite pattern](#composite-pattern)
-- [simple node/express server](#simple-nodeexpress-server)
 - [promises](#promises)
 
 ----

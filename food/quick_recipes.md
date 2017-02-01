@@ -1,4 +1,4 @@
-## quick recipes
+# quick recipes
 
 > 🍖🚫 see notes for meat replacements
 

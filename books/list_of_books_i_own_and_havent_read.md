@@ -1,1 +1,42 @@
-my notes
+# a list of books i own but havent read yet
+
+- [ ] working - studs terkel
+- [ ] long division - kiese laymon
+- [ ] inventing the future - nick srnicek & alex williams
+- [ ] how europe underdeveloped africa - walter rodney
+- [ ] born to run (autobio) - bruce springsteen
+- [ ] one of us - hugo young
+- [ ] the history of white people - nell irvin painter
+- [ ] the pragmatic programmer - hunt & thomas
+- [ ] structure interpretation of computer programs - abelson & sussman
+- [ ] the house of morgan - ron chernow
+- [ ] the underground railroad - colson whitehead
+- [ ] the nature of code - daniel shiffman
+- [ ] the intellectual life of the british working classes - jonathan rose
+- [ ] paradise lost - john milton
+- [ ] the odyssey - homer
+- [ ] neuromancer - william gibson
+- [ ] between the world and me - ta-nehisi coates
+- [ ] to save everything, click here - evgeny morozov
+- [ ] ghost in the wires - kevin mitnick
+- [ ] sometimes a great notion - ken kesey
+- [ ] pale fire - vladimir nobokov
+- [ ] faust - goethe
+- [ ] absalom, absalom - william faulkner
+- [ ] if they come in the morning - angela davis
+- [ ] the wretched of the earth - frantz fanon
+- [ ] the heart is a lonely hunter - carson mccullers
+- [ ] tram 83 - fiston mwanza mujila
+- [ ] man tiger - eka kurniawan
+- [ ] the master switch - tim wu
+- [ ] where wizards stay up late - katie hafner
+- [ ] congo - david van reybrouck
+- [ ] good neighbors - sylvie tissot
+- [ ] ulysses - james joyce
+- [ ] another country - james baldwin
+- [ ] silence - john cage
+- [ ] one-dimensional man - herbert marcuse
+- [ ] the decline of the west - oskar spengler
+- [ ] failure, a writer's life - joe milutis
+- [ ] america - jean baudrillard
+- [ ] the black swan - nassim nicholas taleb

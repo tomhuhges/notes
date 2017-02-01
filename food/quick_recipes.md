@@ -2,6 +2,8 @@
 
 > 🍖🚫 see notes for meat replacements
 
+----
+
 <img src="http://munchies-images.vice.com/wp_upload/lamb-souvlaki.jpg?crop=1xw:0.8xh;*,*&resize=300:*" align="right" />
 
 ## lamb souvlaki wrap
@@ -12,7 +14,7 @@
 
 ----
 
-<img src="http://munchies-images.vice.com/wp_upload/pesto-mac-and-cheese-munchies.jpg?crop=1xw:0.4xh;*,*&resize=300:*" align="right"/>
+<img src="http://munchies-images.vice.com/wp_upload/pesto-mac-and-cheese-munchies.jpg?crop=1xw:0.4xh;*,*&resize=300:*" align="right" />
 
 ## green mac + cheese
 
@@ -32,5 +34,8 @@
 
 ----
 
-## [easy shiitake mushroom pasta](http://www.seriouseats.com/recipes/2014/10/pasta-pancetta-shiitake-mushrooms-parmesan-recipe.html)  
-`-- pancetta`
+## easy shiitake mushroom pasta
+
+[link](http://www.seriouseats.com/recipes/2014/10/pasta-pancetta-shiitake-mushrooms-parmesan-recipe.html)  
+
+`notes: -- pancetta`

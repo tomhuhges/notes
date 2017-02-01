@@ -2,9 +2,9 @@
 
 > 🍖🚫 see notes for meat replacements
 
-## lamb souvlaki wrap
-
 <img src="http://munchies-images.vice.com/wp_upload/lamb-souvlaki.jpg?crop=1xw:0.8xh;*,*&resize=300:*" align="right" />
+
+## lamb souvlaki wrap
 
 [link](https://munchies.vice.com/en_uk/recipes/lamb-souvlaki-wrap)
 

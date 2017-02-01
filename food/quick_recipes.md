@@ -4,13 +4,23 @@
 
 ----
 
-<img src="https://flockler.com/thumbs/sites/192/noodles_s0x768_q60_noupscale.jpg" align="right" height="150px" />
+<img src="http://www.ottolenghi.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/o/noodles.jpg" align="right" height="150px" />
 
 ## ottolenghi aubergine + mango soba noodles
 
 [link](http://thehappyfoodie.co.uk/recipes/soba-noodles-with-aubergine-and-mango)
 
 `notes: ++ julienned carrot`
+
+----
+
+<img src="http://cdn.jamieoliver.com/recipe-database/oldImages/medium/850_1_1436804730.jpg" align="right" height="150px" />
+
+## keralan veggie curry
+
+[link](http://www.jamieoliver.com/recipes/vegetable-recipes/keralan-veggie-curry-with-poppadoms-rice-minty-yoghurt/)
+
+`notes: make it spicy!`
 
 ----
 

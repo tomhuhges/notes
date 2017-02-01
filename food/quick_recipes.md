@@ -34,6 +34,8 @@
 
 ----
 
+<img src="http://www.seriouseats.com/recipes/assets_c/2014/10/10072014_pasta_mushrooms_yasmin_fahr4-thumb-1500xauto-413041.jpg" align="right" width="300" />
+
 ## easy shiitake mushroom pasta
 
 [link](http://www.seriouseats.com/recipes/2014/10/pasta-pancetta-shiitake-mushrooms-parmesan-recipe.html)  

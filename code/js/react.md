@@ -24,7 +24,7 @@ const Component = React.createClass({
       <div>
         <h1>hello world</h1>
       <div />
-      )
+    )
   }
   })
 ```
@@ -38,7 +38,7 @@ class Component extends React.Component {
       <div>
         <h1>hello world</h1>
       <div />
-      )
+    )
   }
 }
 ```
@@ -77,7 +77,7 @@ props can be any type of data
 ##### string:
 ```jsx
 const Component = (props) =>
-  <h1>hello, {this.props.name}</div>
+  <h1>hello, {this.props.name}</h1>
 
 ReactDOM.render(
   <Component name="tom"/>,
@@ -98,8 +98,9 @@ class Component extends React.Component {
           <li>{user}</li>
           })}
       </ul>
-      )
+    )
   }
+}
 
 ReactDOM.render(
   <Component />,

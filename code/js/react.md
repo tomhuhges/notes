@@ -72,40 +72,39 @@ ReactDOM.render(
 
 ### pass props
 
-props can be any type of data
+there are a couple of ways to pass props, and props can be any type of data.
 
-##### string:
+##### as an attribute
+
 ```jsx
+// string:
 const Component = (props) =>
   <h1>hello, {this.props.name}</h1>
 
 ReactDOM.render(
-  <Component name="tom"/>,
+  <Component name="tom" />,
   document.getElementById('app')
   )
-
 // returns <h1>hello, tom</div>
-```
 
-##### array:
+// array:
 ```jsx
-class Component extends React.Component {
-  render () {
-    const users = ['user1', 'user2', 'user3']
-    return (
-      <ul>
-        {users.map(user=>{
-          <li>{user}</li>
-          })}
-      </ul>
+const App = () => {
+  const users = ['user1', 'user2', 'user3']
+  return (
+    <Component users={users} />
     )
-  }
 }
 
-ReactDOM.render(
-  <Component />,
-  document.getElementById('app')
+const Component = () => {
+  return (
+    <ul>
+      {this.props.users.map(user =>
+        <li>{user}</li>
+      )}
+    </ul>
   )
+}
 
 // returns
 // <ul>
@@ -113,6 +112,20 @@ ReactDOM.render(
 //   <li>user2</l1>
 //   <li>user3</l1>
 // </ul>
+```
+
+##### through `this.props children`
+
+`this.props.children` can be as simple as a string, or an entire component
+
+```jsx
+const Component = () =>
+  <Banner>hello world</Banner>
+
+const Banner = () =>
+  <h1>{this.props.children}</h1>
+
+// returns <h1>hello world</h1>
 ```
 
 ----

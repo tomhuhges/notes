@@ -13,3 +13,11 @@ weakly/dynamically typed, reusable functions
 > As a result the pyramid must stand unchanged for a millennium; the organism must evolve or perish.
 
 ----
+
+### 1 Building Abstractions with Procedures
+
+#### computers and magic
+
+> We conjure the spirits of the computer with our spells ... The programs we use to conjure processes are like a sorcerer's spells. — SICP
+
+> Any sufficiently advanced technology is indistinguishable from magic. — Arthur C Clarke  

@@ -3,6 +3,7 @@
 ## table of contents
 
 - [basics]()
+  - [components]()
   - [create a component (3 ways)]()
   - [render a component]()  
   - [pass props]()
@@ -10,6 +11,10 @@
 ----
 
 ## basics
+
+### components
+
+components are essentially just functions that take props as arguments and return a UI.
 
 ### create a component (3 ways)
 

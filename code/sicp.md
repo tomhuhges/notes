@@ -24,4 +24,6 @@ weakly/dynamically typed, reusable functions
 
 ----
 
+#### modularity
+
 "Well-designed computational systems, like well-designed automobiles or nuclear reactors, are designed in a modular manner, so that the parts can be constructed, replaced, and debugged separately."

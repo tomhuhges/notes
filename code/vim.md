@@ -1,4 +1,4 @@
-# vim commands
+# `vim commands`
 
 #### navigation
 
@@ -7,7 +7,9 @@
 
 #### editing
 
-`i`/`a` - insert  
-`A` - append  
-`dw` - delete to end of word  
-`d$` - delete to end of line  
+`i`/`a` - insert mode  
+`A` - insert mode at end of line  
+`d` - delete
+- `w` - delete to end of word  (**inc.** current char)
+- `e` - delete to end of word  (**exc.** current char)
+- `$` - delete to end of line  

@@ -4,7 +4,9 @@
   - V8
   - servers for idiots
   - why node
+- globals
 - libraries
+- modules
 
 
 ----
@@ -43,7 +45,7 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 
 ----
 
-### globals
+## globals
 
 - Buffer
   work with memory allocations (ES6 TypedArray does similar stuff)
@@ -58,37 +60,37 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 
 ----
 
-### libraries
+## libraries
 
 useful libraries that are part of node core:
 
 - `assert`  
   assertion testing
-- `crypto`
+- `crypto`  
   hashing etc
-- `events`
+- `events`  
   add listeners + emit events
-- `fs`
+- `fs`  
   file reading + writing
-- `http`/`https`
+- `http`/`https`  
   server
-- `path`
+- `path`  
   directory utils
-- `querystring`
+- `querystring`  
   parse URL query strings
-- `stream`
+- `stream`  
   work with streaming data (like processes or HTTP requests)
-- `url`
+- `url`  
   parse URL strings
-- `util`
+- `util`  
   various utils like string formatting, but mostly deprecated
-- `zlib`
+- `zlib`  
   zipping
 
 
 ----
 
-### modules
+## modules
 
 import:
 ```js

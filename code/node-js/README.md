@@ -121,8 +121,13 @@ eventEmitter uses a pubsub style pattern for managing events, with `on` and `emi
 ## async
 
 v8 is **synchronous** (because its running javascript)  
-node.js is **asynchronous** - it can do other stuff while running javascript
+node.js is **asynchronous** - it can do other stuff while running javascript with v8
 
-libuv is a c++ library that allows node to connect to the operating system and request for processes to get done  
-it has its own event loop and provides a callback back to the v8 process when an os process is complete  
+**libuv** is a c library that allows node to connect to the operating system and request for processes to get done  
+it has its own event loop and provides a callback to v8 when an os process is complete  
 v8 will finish the job its doing and then run the callback from libuv
+
+node is **event-driven non-blocking I/O in V8 javascript**  
+- node runs os I/O processes using javascript-like syntax
+- node uses javascript events to manage those processes
+- node runs os processes at the same time as the javascript thread, so it doesnt block the js thread

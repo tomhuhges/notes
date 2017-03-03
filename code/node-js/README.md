@@ -49,7 +49,7 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 ## globals
 
 - Buffer
-  work with memory allocations (ES6 TypedArray does similar stuff)
+  work with memory allocations (ES6 TypedArray does similar stuff, but [use Buffer with node](https://nodejs.org/api/buffer.html#buffer_buffers_and_typedarray))
 - `__dirname`
   the dir of the current module
 - `__filename`
@@ -109,7 +109,7 @@ module.exports = data
 
 there are 2 types of events in node:
 
-- system events (managed by c++ library libuv)
+- system events (managed by c library libuv)
 - custom events (part of the node Event Emitter api, written in js)
 
 when system events happen, they're handled by the custom js events api. it uses an event object similar to the DOM Event.

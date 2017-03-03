@@ -7,7 +7,8 @@
 - globals
 - libraries
 - modules
-
+- events
+- async
 
 ----
 ## background info
@@ -103,3 +104,25 @@ module.exports = data
 ```
 
 ----
+
+## events
+
+there are 2 types of events in node:
+
+- system events (managed by c++ library libuv)
+- custom events (part of the node Event Emitter api, written in js)
+
+when system events happen, they're handled by the custom js events api. it uses an event object similar to the DOM Event.
+
+eventEmitter uses a pubsub style pattern for managing events, with `on` and `emit` methods
+
+----
+
+## async
+
+v8 is **synchronous** (because its running javascript)  
+node.js is **asynchronous** - it can do other stuff while running javascript
+
+libuv is a c++ library that allows node to connect to the operating system and request for processes to get done  
+it has its own event loop and provides a callback back to the v8 process when an os process is complete  
+v8 will finish the job its doing and then run the callback from libuv

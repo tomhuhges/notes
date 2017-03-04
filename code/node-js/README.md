@@ -182,6 +182,6 @@ readable.on('data', (chunk) => {
 });
 ```
 
-> NB. a chunk is typically 64kb
+> NB. a chunk is typically 64kb. this can be changed with the highWaterMark option in the createReadStream options object
 
 ----

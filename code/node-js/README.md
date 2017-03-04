@@ -19,7 +19,7 @@
 - express
   - routing
   - middleware
-  
+
 
 
 
@@ -414,3 +414,27 @@ app.listen(port)
 ----
 
 ### middleware
+
+middleware is just software that sits in between two other pieces of software.
+
+express lets us use middleware with the `app.use()` method.
+
+the following allows us to serve files from one location, even if the request is for another location - in this case requests to `assets/style.css` with return the file at `public/style.css`
+
+```node
+app.use('/assets', express.static(${__dirname}/public`))
+```
+
+here, express.static is the middleware, but it could be any function:
+
+```node
+app.use('/', function (req, res, next) {
+  console.log('Request Type:', req.method)
+  next()
+})
+```
+
+some useful middlewares are available at https://expressjs.com/en/resources/middleware.html  
+they do things like log requests, reroute requests to CDNs etc
+
+----

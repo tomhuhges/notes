@@ -20,6 +20,7 @@
   - routing
   - middleware
   - templating
+  - app structure
 
 ----
 # background info
@@ -481,5 +482,34 @@ Index.propTypes = {
 }
 
 module.exports = Index
+```
+
+----
+
+### app structure
+
+look at boilerplates like [express-generator](https://expressjs.com/en/starter/generator.html)
 
 ```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.pug
+    ├── index.pug
+    └── layout.pug
+
+7 directories, 9 files
+```
+
+----

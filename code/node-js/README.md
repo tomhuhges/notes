@@ -13,7 +13,9 @@
   - streams
   - pipes
 - building a server
-  -
+  - protocols
+  - http
+  - serving files
 
 
 ----
@@ -289,10 +291,47 @@ node's **http** module has a method called createServer which takes a callback. 
 simple example:
 
 ```node
-var http = require('http')
+const http = require('http')
 
 http.createServer((req,res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' })
   res.end('hello world\n')
 }).listen(8000, '127.0.0.1')
+```
+
+### serving files
+
+simple file serving:
+
+```node
+const http = require('http')
+const fs = require('fs')
+
+http.createServer((req,res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  const index = fs.createReadStream(`${__dirname}/index.html`)
+  index.on('data', chunk => res.end(chunk))
+}).listen('8080', '127.0.0.1')
+```
+
+templating:
+
+```html
+<html>
+  <body>
+    <p>{message}</p>
+  </body>
+</html>
+```
+
+```node
+const http = require('http')
+const fs = require('fs')
+
+http.createServer((req,res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' })
+  const index = fs.createReadStream(`${__dirname}/index.html`, 'utf8')
+  const message = 'hello world!'
+  index.on('data', chunk => res.end(chunk.replace('{message}', message)))
+}).listen('8080', '127.0.0.1')
 ```

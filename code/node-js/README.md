@@ -9,6 +9,7 @@
 - modules
 - events
 - async
+- files & fs
 
 ----
 ## background info
@@ -94,7 +95,7 @@ useful libraries that are part of node core:
 ## modules
 
 import:
-```js
+```node
 require('./file')
 ```
 
@@ -110,11 +111,13 @@ module.exports = data
 there are 2 types of events in node:
 
 - system events (managed by c library libuv)
-- custom events (part of the node Event Emitter api, written in js)
+- custom events (part of the node EventEmitter api, written in js)
 
 when system events happen, they're handled by the custom js events api. it uses an event object similar to the DOM Event.
 
-eventEmitter uses a pubsub style pattern for managing events, with `on` and `emit` methods
+EventEmitter uses a pubsub style pattern for managing events, with `on` and `emit` methods
+
+typically, you create your own custom event handlers by inherting from EventEmitter
 
 ----
 
@@ -131,3 +134,37 @@ node is **event-driven non-blocking I/O in V8 javascript**
 - node runs os I/O processes using javascript-like syntax
 - node uses javascript events to manage those processes
 - node runs os processes at the same time as the javascript thread, so it doesnt block the js thread
+
+----
+
+## files & fs
+
+simple example:
+
+```node
+const fs = require('fs')
+
+// synchronously read file content
+const fileContent = fs.readFileSync(`${__dirname}/file.txt`, 'utf8')
+console.log(fileContent)
+
+// asynchronously read file content
+fs.readFile(`${__dirname}/file.txt`, 'utf8', (err, fileContent) => console.log(fileContent))
+```
+
+----
+
+# streams
+
+Stream is a base class that inherits from EventEmitter
+
+there are several types of Streams which inherit from Stream:
+
+- Readable
+- Writable
+- Duplex (can both read + write)
+- Transform (a type of Duplex that rewrites stream data according to a function)
+
+like event handlers, you typically create your own custom streams by inheriting from one of the above
+
+----

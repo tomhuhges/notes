@@ -16,6 +16,11 @@
   - protocols
   - http
   - serving files
+- express
+  - routing
+  - middleware
+  
+
 
 
 ----
@@ -360,8 +365,52 @@ http.createServer((req, res) => {
     res.writeHead(404)
     res.end('404 file not found')
   }
-  
+
 }).listen('8080', '127.0.0.1')
 ```
 
 ----
+
+# express
+
+express is a framework that makes setting up node servers easier.
+
+in the example below, .listen calls node's http.createServer for us, so we don't have to.
+
+```node
+const express = require('express')
+const app = express()
+
+const port = process.env.PORT || 3000
+
+app.get('/', (req, res) => {
+  res.send('<html><body><a href="michaelbolton.jpeg">click here for fun times</a></body></html>')
+})
+app.get('/michaelbolton.jpeg', (req, res) => {
+  res.set('Content-Type', 'image/jpeg')
+  res.sendFile(`${__dirname}/michaelbolton.jpeg`)
+})
+
+app.listen(port)
+```
+
+----
+
+### routing
+
+```node
+const express = require('express')
+const app = express()
+
+const port = process.env.PORT || 3000
+
+app.get('/user/:id', (req, res) => {
+  res.send(`<html><body><p>hello user ${req.params.id}</p></body></html>`)
+})
+
+app.listen(port)
+```
+
+----
+
+### middleware

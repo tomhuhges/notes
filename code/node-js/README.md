@@ -10,6 +10,7 @@
 - events
 - async
 - files & fs
+  - streams
 
 ----
 ## background info
@@ -154,7 +155,7 @@ fs.readFile(`${__dirname}/file.txt`, 'utf8', (err, fileContent) => console.log(f
 
 ----
 
-# streams
+### streams
 
 Stream is a base class that inherits from EventEmitter
 
@@ -165,6 +166,22 @@ there are several types of Streams which inherit from Stream:
 - Duplex (can both read + write)
 - Transform (a type of Duplex that rewrites stream data according to a function)
 
-like event handlers, you typically create your own custom streams by inheriting from one of the above
+like event handlers, you typically create your own custom streams by inheriting from one of the above  
+node has its own custom stream objects, such as ReadStream (inherits from Readable)
+
+example:
+
+```node
+const fs = require('fs')
+// createReadStream returns a ReadStream object
+const readable = fs.createReadStream(`${__dirname}/file.txt`, { encoding: 'utf8' })
+
+// since it returns a Stream, we can use EventEmitter methods
+readable.on('data', (chunk) => {
+  console.log(`Received text chunk: ${chunk}`);
+});
+```
+
+> NB. a chunk is typically 64kb
 
 ----

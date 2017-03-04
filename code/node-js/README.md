@@ -12,6 +12,8 @@
 - files & fs
   - streams
   - pipes
+- building a server
+  -
 
 
 ----
@@ -240,6 +242,36 @@ const gzip = zlib.createGzip()
 // the readable stream is read into the gzip Transform stream
 // it is transformed into gzipped data
 readable.pipe(gzip)
-// then it writes that data into our compressed stream: file.txt.gz
+// then it writes that data into our writable compressed stream: file.txt.gz
   .pipe(compressed)
+```
+
+----
+
+## building a server
+
+**IP** - Internet Protocol, a standard for identifying computers connected to the internet  
+**TCP** - Transmission Control Protocol, a standard for how information is transported via the internet (eg. in packets)
+
+operating systems have the ability to interact with these protocols, and node allows us to use javascript to work with them. since any data protocol can be used with TCP/IP, node can be used to build any type of server (HTTP, FTP, SMTP, etc). **node treats TCP packets as a stream.**
+
+**port** a port is a number that identifies the program running on the server computer that should receive the data inside packets sent over the internet. when we have a program running on a server, we assign it a port number. a program **listens** to the port to determine incoming packets.
+
+**HTTP** - Hypertext Transfer Protocol, a standard for structuring data sent over the internet. it has 2 formats, request and response.
+
+an HTTP request:
+
+```HTTP
+CONNECT www.google.com:443 HTTP/1.1
+Host: www.google.com
+Connection: keep-alive
+```
+
+an HTTP response:
+
+```HTTP
+HTTP/1.1 200 OK
+Content-Length: 44
+Content-Type: text/html
+<html><head> ... </head></html>
 ```

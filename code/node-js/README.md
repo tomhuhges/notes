@@ -303,6 +303,8 @@ http.createServer((req,res) => {
 
 ### serving files
 
+we can use streamed data as our response because TCP/IP uses streams. our chunked data is sent as packets.
+
 simple file serving:
 
 ```node
@@ -311,8 +313,8 @@ const fs = require('fs')
 
 http.createServer((req,res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' })
-  const index = fs.createReadStream(`${__dirname}/index.html`)
-  index.on('data', chunk => res.end(chunk))
+  fs.createReadStream(`${__dirname}/index.html`)
+    .pipe(res)
 }).listen('8080', '127.0.0.1')
 ```
 

@@ -11,6 +11,8 @@
 - async
 - files & fs
   - streams
+  - pipes
+
 
 ----
 ## background info
@@ -173,7 +175,9 @@ example:
 
 ```node
 const fs = require('fs')
+
 // createReadStream returns a ReadStream object
+// it takes an optional options object as its 2nd parameter
 const readable = fs.createReadStream(`${__dirname}/file.txt`, { encoding: 'utf8' })
 
 // since it returns a Stream, we can use EventEmitter methods
@@ -185,3 +189,57 @@ readable.on('data', (chunk) => {
 > NB. a chunk is typically 64kb. this can be changed with the highWaterMark option in the createReadStream options object
 
 ----
+
+### pipes
+
+we could do the following:
+
+```node
+const fs = require('fs')
+
+const readable = fs.createReadStream(`${__dirname}/file.txt`)
+const writable = fs.createWritableStream(`${__dirname}/fileCopy.txt`)
+
+readable.on('data', (chunk) => {
+  writable.write(chunk)
+});
+```
+
+this reads the stream from file.txt and writes the data chunk by chunk into fileCopy.txt in order to duplicate the file.
+
+using a readable stream to write data elsewhere is so common that there's an easier way to do this: **pipes**
+
+`pipe` is a method on all Readable streams. it takes a writable stream as a parameter, writes the readable stream to it and returns the writable stream.
+
+```node
+src.pipe(dest)
+```
+
+so the previous code could be rewritten as:
+
+```node
+const fs = require('fs')
+
+const readable = fs.createReadStream(`${__dirname}/file.txt`)
+const writable = fs.createWritableStream(`${__dirname}/fileCopy.txt`)
+
+readable.pipe(writable);
+```
+
+because `pipe` returns the writable stream, we can chain pipes so long as they're Duplex or Transform (readable + writable) streams:
+
+```node
+const fs = require('fs')
+
+const readable = fs.createReadStream(`${__dirname}/file.txt`)
+const compressed = fs.createWritableStream(`${__dirname}/file.txt.gz`)
+
+// createGzip creates a Transform stream that transforms data into a gzipped format as it reads it in
+const gzip = zlib.createGzip()
+
+// the readable stream is read into the gzip Transform stream
+// it is transformed into gzipped data
+readable.pipe(gzip)
+// then it writes that data into our compressed stream: file.txt.gz
+  .pipe(compressed)
+```

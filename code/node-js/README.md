@@ -19,9 +19,7 @@
 - express
   - routing
   - middleware
-
-
-
+  - templating
 
 ----
 # background info
@@ -438,3 +436,50 @@ some useful middlewares are available at https://expressjs.com/en/resources/midd
 they do things like log requests, reroute requests to CDNs etc
 
 ----
+
+### templating
+
+express can handle dynamic HTML generation with templating. here's an example with React
+
+app.js  
+
+```node
+const express = require('express')
+const reactViews = require('express-react-views')
+
+const app = express()
+const port = process.env.PORT || 3000
+
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', reactViews.createEngine())
+
+app.get('/', (req, res) => {
+  res.render('index')
+})
+
+app.listen(port)
+```
+
+views/index.jsx
+
+```jsx
+const React = require('react')
+
+const Index = (props) => {
+  return (
+    <html>
+      <body>
+        <p>Hello {props.name}</p>
+      </body>
+    </html>
+  )
+}
+
+Index.propTypes = {
+  name: React.PropTypes.string
+}
+
+module.exports = Index
+
+```

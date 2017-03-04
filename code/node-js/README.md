@@ -17,7 +17,7 @@
 
 
 ----
-## background info
+# background info
 
 ### V8
 
@@ -52,7 +52,7 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 
 ----
 
-## globals
+# globals
 
 - Buffer
   work with memory allocations (ES6 TypedArray does similar stuff, but [use Buffer with node](https://nodejs.org/api/buffer.html#buffer_buffers_and_typedarray))
@@ -67,7 +67,7 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 
 ----
 
-## libraries
+# libraries
 
 useful libraries that are part of node core:
 
@@ -97,7 +97,7 @@ useful libraries that are part of node core:
 
 ----
 
-## modules
+# modules
 
 import:
 ```node
@@ -111,7 +111,7 @@ module.exports = data
 
 ----
 
-## events
+# events
 
 there are 2 types of events in node:
 
@@ -126,7 +126,7 @@ typically, you create your own custom event handlers by inherting from EventEmit
 
 ----
 
-## async
+# async
 
 v8 is **synchronous** (because its running javascript)  
 node.js is **asynchronous** - it can do other stuff while running javascript with v8
@@ -142,7 +142,7 @@ node is **event-driven non-blocking I/O in V8 javascript**
 
 ----
 
-## files & fs
+# files & fs
 
 simple example:
 
@@ -248,7 +248,9 @@ readable.pipe(gzip)
 
 ----
 
-## building a server
+# building a server
+
+### protocols
 
 **IP** - Internet Protocol, a standard for identifying computers connected to the internet  
 **TCP** - Transmission Control Protocol, a standard for how information is transported via the internet (eg. in packets)
@@ -275,3 +277,7 @@ Content-Length: 44
 Content-Type: text/html
 <html><head> ... </head></html>
 ```
+
+node uses http_parser, a C program that parses HTTP requests and responses
+
+----

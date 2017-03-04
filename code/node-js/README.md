@@ -56,15 +56,15 @@ since javascript is single threaded, this makes it unsuitable for dealing with m
 
 # globals
 
-- Buffer
+- Buffer  
   work with memory allocations (ES6 TypedArray does similar stuff, but [use Buffer with node](https://nodejs.org/api/buffer.html#buffer_buffers_and_typedarray))
-- `__dirname`
+- `__dirname`  
   the dir of the current module
-- `__filename`
+- `__filename`  
   the filename of the current module
-- `module`
+- `module`  
   the current module
-- `process`
+- `process`  
   the current node.js process
 
 ----
@@ -346,7 +346,7 @@ routing:
 const http = require('http')
 const fs = require('fs')
 
-http.createServer((req,res) => {
+http.createServer((req, res) => {
 
   if (req.url === '/') {
     res.writeHead(200, { 'Content-Type': 'text/html' })
@@ -360,6 +360,7 @@ http.createServer((req,res) => {
     res.writeHead(404)
     res.end('404 file not found')
   }
+  
 }).listen('8080', '127.0.0.1')
 ```
 

@@ -352,12 +352,15 @@ http.createServer((req,res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' })
     fs.createReadStream(`${__dirname}/index.html`)
       .pipe(res)
-  }
-  if (req.url === '/michaelbolton.jpeg') {
+  } else if (req.url === '/michaelbolton.jpeg') {
     res.writeHead(200, { 'Content-Type': 'image/jpeg' })
     fs.createReadStream(`${__dirname}/michaelbolton.jpeg`)
       .pipe(res)
+  } else {
+    res.writeHead(404)
+    res.end('404 file not found')
   }
-
 }).listen('8080', '127.0.0.1')
 ```
+
+----

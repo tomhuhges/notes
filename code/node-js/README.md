@@ -339,3 +339,25 @@ http.createServer((req,res) => {
   index.on('data', chunk => res.end(chunk.replace('{message}', message)))
 }).listen('8080', '127.0.0.1')
 ```
+
+routing:
+
+```node
+const http = require('http')
+const fs = require('fs')
+
+http.createServer((req,res) => {
+
+  if (req.url === '/') {
+    res.writeHead(200, { 'Content-Type': 'text/html' })
+    fs.createReadStream(`${__dirname}/index.html`)
+      .pipe(res)
+  }
+  if (req.url === '/michaelbolton.jpeg') {
+    res.writeHead(200, { 'Content-Type': 'image/jpeg' })
+    fs.createReadStream(`${__dirname}/michaelbolton.jpeg`)
+      .pipe(res)
+  }
+
+}).listen('8080', '127.0.0.1')
+```

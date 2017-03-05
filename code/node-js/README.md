@@ -1,26 +1,26 @@
 # Node.js
 
-- background info
-  - V8
-  - servers for idiots
-  - why node
-- globals
-- libraries
-- modules
-- events
-- async
-- files & fs
-  - streams
-  - pipes
-- building a server
-  - protocols
-  - http
-  - serving files
-- express
-  - routing
-  - middleware
-  - templating
-  - app structure
+- [background info](#background-info)
+  - [V8](#v8)
+  - [servers for idiots](#servers-for-idiots)
+  - [why node](#why-node)
+- [globals](#globals)
+- [libraries](#libraries)
+- [modules](#modules)
+- [events](#events)
+- [async](#async)
+- [files & fs](#files-fs)
+  - [streams](#streams)
+  - [pipes](#pipes)
+- [building a server](#building-a-server)
+  - [protocols](#protocols)
+  - [http](#http)
+  - [serving files](#serving-files)
+- [express](#express)
+  - [routing](#routing)
+  - [middleware](#middleware)
+  - [templating](#templating)
+  - [app structure](#app-structure)
 
 ----
 # background info
@@ -31,7 +31,7 @@ V8 is actually written in c++ - it takes javascript and outputs machine code.
 
 node.js is also written in c++. it is a "runtime environment"\* that uses v8 to process javascript and also adds some features. so the extra javascript that's possible with node is possible because it converts it to c++ code.
 
-\* a runtime environment is the system that executes code live, with the help of a compiler (like v8). an operating system is a kind of runtime environment.
+\* a runtime environment is the system that executes code live, with the help of a compiler (like v8). an operating system, a server, a browser, a [virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) and a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) are all kinds of runtime environment.
 
 ----
 
@@ -41,7 +41,7 @@ a server is a computer connected to the internet. it has an operating system ins
 
 when you type a website into a browser, the browser does a DNS lookup to workout the IP of the server computer. the computer is on all day and the operating system lets the server program know when a HTTP request arrives at its IP. the server program will do something in response to the request, for example it might send back a HTML file, or a piece of JSON, or it may interpret some PHP/ruby/python to create a HTML file. this is sent back to the requesting IP address.
 
-node allows us to use javascript to both manipulate the DOM in the browser, and manage HTTP requests on the server.
+node allows us to use "javascript" to manage HTTP requests on the server, just like we can use it in the browser.
 
 ----
 

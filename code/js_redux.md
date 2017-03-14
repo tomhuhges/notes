@@ -66,7 +66,7 @@ function reducer(state = [], action) {
 
 ### Provider
 
-the `Provider` component provides a way to make the redux store available as a prop to all components.
+the `Provider` component provides a way to make the redux store available as a prop to all components. We wrap our app with the Provider because the data will flow down to everything inside it.
 
 ```js
 <Provider store={this.props.store}>
@@ -91,7 +91,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Container)
 
 ### mapStateToProps
 
-this function determines the state you want to expose to the container component. technically you could just return the entire state but in large apps this would kill performance. it's better to restrict to only the parts of the state that need exposing:
+this function determines the state you want to expose to the container component (ie. **the data the component needs to use**). technically you could just return the entire state but in large apps this would kill performance. it's better to restrict to only the parts of the state that the component needs to know about:
 
 ```js
 function mapStateToProps(state){
@@ -107,7 +107,7 @@ function mapStateToProps(state){
 
 ### mapDispatchToProps
 
-this function determines the actions you want to expose to the container component. you can use redux's `bindActionCreators` function to inject dispatch functionality into each action:
+this function determines the actions you want to expose to the container component (ie. **the actions the component needs to use**). you can use redux's `bindActionCreators` function to inject dispatch functionality into each action:
 
 ```js
 import { bindActionCreators } from 'redux'

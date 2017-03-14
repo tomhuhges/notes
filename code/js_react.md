@@ -7,6 +7,7 @@
   - [create a component (3 ways)]()
   - [render a component]()  
   - [pass props]()
+- [best practices]()
 
 ----
 
@@ -134,3 +135,14 @@ const Banner = () =>
 ```
 
 ----
+
+### react best practices
+
+- keep components small  
+  it's better to have lots of small components than a few big ones
+- avoid using state < research this  
+  - cant share data
+  - hard to test
+- use functional components when not using lifecycle components, state, this
+  - downsides: hot reload might not work, have to change structure when debugging
+- use immutable.js

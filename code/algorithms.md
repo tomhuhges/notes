@@ -1,5 +1,13 @@
 ### Insertion sort
 
+**beast case:** O(n) - data is already sorted  
+**worst case:** O(n²) - data is reverse of sorted order  
+**average case:** O(n²) - insertion sort performs well on very small arrays, even better than quicksort. implementations of quicksort may switch to insertion sort when data size is bellow a certain threshold.  
+
+**comments:**  Although it is one of the elementary sorting algorithms with O(n²) worst-case time, insertion sort is the algorithm of choice either when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).
+
+For these reasons, and because it is also stable, insertion sort is often used as the recursive base case (when the problem size is small) for higher overhead divide-and-conquer sorting algorithms, such as merge sort or quick sort.
+
 ```js
 const insertionSort = (arr, compareFunction) => {
   // loop through the array starting at index 1

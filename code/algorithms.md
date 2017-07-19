@@ -1,6 +1,6 @@
 ### Insertion sort
 
-**beast case:** O(n) - data is already sorted  
+**best case:** O(n) - data is already sorted  
 **worst case:** O(n²) - data is reverse of sorted order  
 **average case:** O(n²) - insertion sort performs well on very small arrays, even better than quicksort. implementations of quicksort may switch to insertion sort when data size is bellow a certain threshold.  
 

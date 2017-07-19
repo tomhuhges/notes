@@ -2,7 +2,7 @@
 
 **best case:** O(n) - data is already sorted  
 **worst case:** O(n²) - data is reverse of sorted order  
-**average case:** O(n²) - insertion sort performs well on very small arrays, even better than quicksort. implementations of quicksort may switch to insertion sort when data size is bellow a certain threshold.  
+**average case:** O(n²) - insertion sort performs well on very small arrays, even better than quicksort. implementations of quicksort may switch to insertion sort when data size is below a certain threshold.  
 
 **comments:**  Although it is one of the elementary sorting algorithms with O(n²) worst-case time, insertion sort is the algorithm of choice either when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).
 

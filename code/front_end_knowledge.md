@@ -351,8 +351,6 @@ JSX is an extension to javascript that allows you to create DOM elements in some
 
 it's useful because writing endless javascript functions to create and modify and combine elements is extremely tedious and writing tedious code usually means more errors. it's very clean to read.
 
-**What are the key features of Flux architecture?**
-
 **What are pure functional components? When would you use them**
 
 they are pure functions which simply take props and render the UI.

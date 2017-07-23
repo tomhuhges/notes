@@ -1,3 +1,10 @@
+### Contents
+
+- [Insertion sort]()  
+- [Loop invariants]()  
+
+----
+
 ### Insertion sort
 
 **best case:** O(n) - data is already sorted  
@@ -35,3 +42,25 @@ const insertionSort = (arr, compareFunction) => {
 }
 
 ```
+
+----
+
+### Loop invariants
+
+we can infer that our insertion sort implementation is correct with a loop invariant. the invariant must be true at 3 stages in the loop's lifecycle. these are:  
+
+1. at the start of the loop, before it has run.  
+2. after each iteration of the loop.  
+3. after the loop has ended.  
+
+for our insertion sort implementation, we can us the following as our loop invariant:  
+
+> subarray `arr[0]` to `arr[i - 1]` is sorted
+
+we should be able to prove this at each stage.
+
+1. before the loop runs, we set `i` equal to 1. since `i - 1` is 0, we can prove that the subarray `arr[0]` - `arr[0]` is sorted because there is only one element in that range and therefore it must be sorted.  
+2. during the loop, the algorithm moves `arr[i - 1]` to `arr[i]` so long as the compare function requires it. it then inserts the original `arr[i]` in `arr[i - 1]` in order to sort them. otherwise the two elements remain where they are because they're already sorted. so we can say that the subarray `arr[0]` to `arr[1]` is sorted and the invariant holds after the first iteration of the loop. since we're only moving one element into place during each loop and only incrementing `i` by one each time, we can also say that the invariant holds after each loop.  
+3. the loop terminates when `i` is equal to `arr.length`. we need to prove that the subarray `arr[0]` to `arr[arr.length - 1]` is sorted. based on our observations of the subarray's state after each loop iteration, we know this subarray is sorted. we also know that the subarray is actually the whole array, and therefore the entire array is sorted and the algorithm is correct.
+
+----

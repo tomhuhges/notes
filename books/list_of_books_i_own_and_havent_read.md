@@ -1,5 +1,14 @@
-# a list of books i own but havent read yet
+# a list of books i own but havent finished reading yet
 
+- [ ] the timeless way of building - christopher alexander
+- [ ] critique of everyday life - henri lefebvre
+- [ ] cybernetics - norbert weiner
+- [ ] remains of the day - kazuo ishiguro
+- [ ] the refugees - viet thanh nguyen
+- [ ] homo deus - yuval noah harari
+- [ ] sapiens - yuval noah harari
+- [ ] the soccer war - ryszard kapuściński
+- [ ] homage to catalonia - george orwell
 - [ ] working - studs terkel
 - [ ] long division - kiese laymon
 - [ ] inventing the future - nick srnicek & alex williams
@@ -32,6 +41,7 @@
 - [ ] where wizards stay up late - katie hafner
 - [ ] congo - david van reybrouck
 - [ ] good neighbors - sylvie tissot
+- [ ] hackers and painters - paul graham  
 - [ ] ulysses - james joyce
 - [ ] another country - james baldwin
 - [ ] silence - john cage

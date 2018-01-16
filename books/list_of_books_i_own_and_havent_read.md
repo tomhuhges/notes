@@ -1,4 +1,4 @@
-# a list of books i own but havent
+# a list of books i own but havent read
 
 `⏳ = in progress`
 
